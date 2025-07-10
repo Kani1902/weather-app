@@ -11,7 +11,7 @@ function App() {
     setError('');
     setWeather(null);
     try {
-      const res = await axios.get(`http://weather-app-j0qv.onrender.com/api/weather?city=${city}`);
+      const res = await axios.get(`https://weather-app-j0qv.onrender.com/api/weather?city=${city}`);
       setWeather(res.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Error fetching weather');
